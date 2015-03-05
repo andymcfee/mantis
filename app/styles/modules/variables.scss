@@ -77,6 +77,11 @@ $link-color:            $brand-primary !default;
 $link-hover-color:      darken($link-color, 5%) !default;
 
 
+// Step Component colors
+$selector-color: $text-color;
+$variable-color: $orange;
+$value-color: $blue;
+
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
