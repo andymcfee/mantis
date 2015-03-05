@@ -1,0 +1,34 @@
+// Variable element in Recorder and App (Type VARIABLE into ELEMENT)
+%variable {
+  font-weight: $font-bold;
+  color: $variable-color;
+  padding: 0;
+  &:before {
+    content: "\f1b2";
+    display: inline-block;
+    font-family: 'FontAwesome';
+    font-size: 14px;
+    margin-right: -2px;
+  }
+  &.editable {
+    border-bottom-color: $variable-color;
+    &:hover {
+      color: lighten($variable-color, 10);
+    }
+  }
+}
+
+// Value of an input in a step recording. i.e. Type VALUE in ELEMENT
+%value {
+  font-weight: bold;
+  color: $text-color;
+  margin-right: 6px;
+  &.editable {
+    color: $value-color;
+    font-weight: $font-normal;
+    border-bottom-color: $value-color;
+    &:hover {
+      color: darken($value-color, 10);
+    }
+  }
+}
