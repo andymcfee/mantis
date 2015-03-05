@@ -1,0 +1,321 @@
+// Forms
+
+// Resets
+input[type="text"]
+input[type="password"]
+input[type="datetime"]
+input[type="datetime-local"]
+input[type="date"]
+input[type="email"]
+input[type="search"] {
+  border: 10px solid $red;
+  outline: none;
+  background: transparent;
+
+
+}
+
+
+.form--block,
+%form--block {
+  width: 100%;
+  max-width: 550px;
+  padding: 2rem;
+  order: 10;
+  &:first-child { padding-top: 0; }
+  &:last-child { padding-bottom: 0; }
+
+  @include MQ(Mplus) {
+    padding: 0 2rem;
+  }
+
+  + .form--block {
+    padding-top: 0;
+
+  }
+
+}
+
+
+
+.form--block__helper {
+  @extend %form--block;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  text-align: left;
+  font-weight: $font-light;
+  color: rgba($text-color, .75);
+  @include MQ(Mplus) {
+    order: 15;
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+}
+
+  .form--helper__title,
+  .form--helper__subtitle {
+    text-shadow: 1px 1px 0 white;
+    margin: 0 0 1rem;
+  }
+
+  .form--helper__title {
+    font-size: 2rem;
+  }
+  .form--helper__subtitle {
+    font-size: 1.5rem;
+    font-weight: $font-light;
+  }
+
+  .form--helper__list {
+    text-align: left;
+    margin: 0 0 1rem;
+    padding-left: 1.5rem;
+    li {
+      margin-bottom: .5rem;
+      &:last-child { margin-bottom: 0;}
+    }
+  }
+
+
+
+.form--options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include MQ(Splus) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.form--link {
+  flex: 0 1 auto;
+  color: $grey-light;
+  font-size: 1rem;
+  transition: $trans-duration $trans-timing color;
+  &:hover {
+    color: $blue;
+  }
+}
+
+.link--remember-me {
+  flex: 0 1 auto;
+  padding: .5rem 0;
+  display: none;
+}
+
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.form--item {
+  flex: 0 0 100%;
+  display: flex;
+  margin-bottom: 1rem;
+  flex-direction: column;
+}
+
+.form--item__half {
+  @extend .form--item;
+  @include MQ(Splus) {
+    flex-direction: row;
+  }
+}
+
+.item__split {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  @include MQ(Splus) {
+    flex: 0 1 50%;
+  }
+
+  &:first-child {
+    margin-bottom: 1rem;
+    @include MQ(Splus) {
+      margin-bottom: 0;
+      padding-right: .5rem;
+    }
+  }
+
+  &:last-child {
+    @include MQ(Splus) {
+      padding-left: .5rem;
+    }
+  }
+
+
+  .hidden {
+    flex: 0 0 0;
+  }
+}
+
+
+.form--header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.form--header__title {
+  font-size: 1.5rem;
+  margin: 0;
+  width: 100%;
+}
+
+.form--header__text {
+  margin: .5rem 0 0;
+  font-size: 1rem;
+  font-weight: $font-light;
+}
+
+.svg--icon {
+  width: 100px;
+  height: 100px;
+  z-index: 0;
+  position: relative;
+  filter: drop-shadow(0 1px 0 rgba(white, .8))
+}
+
+.form--options {
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+
+.form--msg {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba($blue, .3);
+  color: rgba($blue, .9);
+  background-color: rgba($blue, .07);
+}
+
+@mixin formMsg($color) {
+  border-color: rgba($color, .3);
+  color: rgba($color, .8);
+  background-color: rgba($color, .07);
+  text-shadow: 0 1px 0 white;
+}
+
+.form--msg__alert   { @include formMsg($blue);}
+.form--msg__success {
+  @include formMsg($green);
+  color: $green;
+}
+.form--msg__error,
+.form--msg__danger  { @include formMsg($red);}
+.form--msg__warning { @include formMsg($orange);}
+
+
+
+
+.msg--title,
+.msg--text {
+  margin: 0;
+}
+
+.msg--title {
+  font-size: 1.25rem;
+  margin-bottom: .5rem;
+}
+
+
+
+
+@include placeholder(rgba($form-color, .4));
+
+.form--input {
+  flex: 0 1 auto;
+  border: 1px solid darken($form-bg, 5%);
+  padding: 1rem;
+  color: rgba($text-color, .65);
+  text-shadow: 1px 1px 0 lighten($form-bg, 3%);
+  font-size: 1rem;
+  //border-radius: 6px;
+  background-color: $form-bg;
+  transition: $trans-duration $trans-timing all;
+  box-shadow: 0 1px 0 0 rgba(white, .8);
+
+  &:focus {
+    border-color: darken($form-bg, 10%);
+    outline: 0;
+    color: $text-color;
+    background-color: lighten($form-bg, 9%);
+  }
+
+  @include MQ(Splus) {
+    font-size: 1.25rem;
+    padding: .75rem 1rem;
+  }
+
+}
+
+
+.form--sublink {
+  text-align: center;
+  font-size: 1rem;
+}
+.form__muted {
+  color: rgba($form-color, .5);
+}
+
+
+
+
+.link__light,
+.link__light:visited,
+.link__light:hover {
+  color: rgba($form-color, .5);
+}
+
+.link__light:hover {
+  text-decoration: underline;
+}
+
+
+// Parsley Form Validation Styles
+.form--input.parsley-error {
+  border-color: rgba($red, .15);
+  color: rgba($red, .6);
+  background-color: rgba($red, .05);
+  &:focus {
+    border-color: rgba($red, .3);
+    color: rgba($red, .8);
+    background-color: rgba($red, .07);
+  }
+}
+
+.checkbox.parsley-error,
+.checkbox.parsley-error a {
+  color: rgba($red, .6);
+}
+
+.parsley-errors-list {
+  margin:0;
+  font-size: .875rem;
+  font-weight: $font-light;
+  list-style-type: none;
+  color: rgba($red, .7);
+  padding: 0;
+  min-height: 0;
+  transition: $trans-duration $trans-timing min-height;
+  text-align: right;
+
+  &.filled {
+    min-height: 22px;
+  }
+}

@@ -1,0 +1,58 @@
+// SVG BugBuster Logo styles
+
+.logo-svg {
+  min-width: 120px;
+  width: 100%;
+}
+
+.logo--path__tm {
+  fill: $green;
+}
+.logo--path__bug{
+  fill-rule:evenodd;
+  clip-rule:evenodd;
+  fill: #303336;
+}
+.icon--path,
+.logo--path__icon-buster{
+  fill-rule:evenodd;
+  clip-rule:evenodd;
+  fill: $green;
+  transition: $trans-timing $trans-duration fill;
+}
+
+.logo--path__icon-inner {
+  fill: white;
+}
+
+.warning .icon--path {
+  fill: rgba($orange, .8);
+}
+
+.error .icon--path,
+.danger .icon--path {
+  fill: rgba($red, .8);
+}
+
+
+// Integrations logos
+.int-logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  fill: $grey-light;
+
+  svg {
+    max-width: 250px;
+    width: 100%;
+  }
+
+  @include MQ(Mplus) {
+    flex-direction: column;
+  }
+}
+
+.int-logo {
+  fill: $grey-light;
+}

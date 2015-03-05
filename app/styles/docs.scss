@@ -1,0 +1,73 @@
+@import "modules/variables";
+@import "modules/mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.m-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.m-section {
+  max-width: 1200px;
+  width: 100%;
+  padding: 3rem 1rem;
+
+
+  h2 {
+
+  }
+
+  p {
+
+  }
+
+}
+
+.m-colors {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+
+  li {
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+.m-color-tile {
+  height: 80px;
+  width: 100%;
+  background-color: black;
+  &.grey-darker   { background-color: $grey-darker; }
+  &.grey-dark     { background-color: $grey-dark; }
+  &.grey          { background-color: $grey; }
+  &.grey-light    { background-color: $grey-light; }
+  &.grey-lighter  { background-color: $grey-lighter; }
+  &.white         { background-color: white; }
+
+  &.blue  { background-color: $blue; }
+  &.green  { background-color: $green; }
+  &.orange  { background-color: $orange; }
+  &.red  { background-color: $red; }
+  &.purple  { background-color: $purple; }
+
+}

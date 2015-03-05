@@ -1,0 +1,26 @@
+// 404 Page Styles
+.section--404 {
+  background: darken($grey-lighter, 5%);
+  background: linear-gradient(to bottom,
+    $grey-lighter 0%,
+    darken($grey-lighter, 10%) 100%
+  ); /* W3C */
+  flex-direction: column;
+  align-items: center;
+}
+
+.error-page--title,
+.error-page--subtitle {
+  font-weight: $font-light;
+  margin: 0;
+  text-shadow: 1px 1px 0 white;
+}
+
+.error-page--title {
+  font-size: 7rem;
+}
+
+.error-page--subtitle {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}

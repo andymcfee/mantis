@@ -1,0 +1,132 @@
+
+// Feature page
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  @include MQ(Mplus) {
+    flex-direction: row;
+  }
+
+  &:nth-child(odd) {
+
+  }
+}
+
+.feature__v-c-v {
+  flex-direction: column;
+
+  .feature--copy {
+    max-width: 400px;
+    padding: 4rem 0;
+  }
+  @include MQ(Lplus) {
+    justify-content: center;
+
+    flex-direction: row;
+    width: 100%;
+    .feature--visual,
+    .feature--visual__left {
+      flex: 0 0 1%;
+    }
+
+    .feature--copy {
+      flex: 1 0 400px;
+    }
+  }
+}
+
+.feature__vertical {
+  flex-direction: column;
+}
+
+
+.feature--copy {
+  order: 10;
+  @include MQ(Mplus) {
+    flex: 0 0 45%;
+  }
+  @include MQ(Lplus) {
+    flex: 1 0 $golden-sm;
+  max-width: 100%;
+  }
+
+}
+
+.feature__centered {
+  align-items: center;
+}
+
+
+
+.feature--visual {
+  order: 20;
+  max-width: 100%;
+  margin: 2rem 0;
+
+  @include MQ(Mplus) {
+    margin: 0;
+    padding-left: 2rem;
+    flex: 0 1 1%;
+    img {
+      max-width: none;
+    }
+  }
+
+
+  @include MQ(Lplus) {
+    flex: 0 1 $golden-lg;
+  }
+
+}
+
+.feature__v-c {
+  @include MQ(Mplus) {
+    justify-content: flex-end;
+  }
+}
+
+.feature--visual__left {
+  padding-left: 0;
+  @extend .feature--visual;
+  @include MQ(Mplus) {
+    padding-right: 2rem;
+    align-self: flex-start;
+    order: 5;
+    img { float: right; }
+  }
+}
+
+// Feature Pairs - landing pages I think
+.pair--text {
+  h2 {
+    font-weight: $font-bold;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    @include MQ(Mplus) {
+      font-size: 2.25rem;
+    }
+  }
+  p {
+    font-size: 1rem;
+    font-weight: $font-light;
+    margin-bottom: 1rem;
+
+    @include MQ(Mplus) {
+      font-size: 1.125rem;
+    }
+  }
+  order: 1;
+  @include MQ(Mplus) {
+    order: 0;
+  }
+}
+.pair--img  {
+  order: 2;
+
+  @include MQ(Mplus) {
+    order: 0;
+  }
+}

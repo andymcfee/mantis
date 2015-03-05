@@ -1,0 +1,168 @@
+//
+// Flexbox
+// --------------------------------------------------
+
+// Base Flex classes
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  min-height: 100%;
+  justify-content: flex-start;
+}
+
+$fxg-gutter: 1rem;
+// fxg = flex grid
+.fxg {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+
+
+.fxg--row {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: $fxg-gutter 0;
+  margin-bottom: $fxg-gutter;
+
+  @include MQ(Mplus) {
+    flex-direction: row;
+    margin-left: -$fxg-gutter;
+    padding: 0 $fxg-gutter;
+    width: calc(100% + 32px);
+    [class^="fxg--col"]:first-child { padding-left: 0; }
+    [class^="fxg--col"]:last-child  { padding-right: 0; }
+
+  }
+}
+
+.fxg--row__wrap {
+
+  flex-wrap: wrap;
+  justify-content: center;
+  @include MQ(Mplus) {
+    margin-left: -$fxg-gutter * 2;
+    width: calc(100% + 64px);
+    [class^="fxg--col"]:first-child { padding-left: $fxg-gutter; }
+    [class^="fxg--col"]:last-child  { padding-right: $fxg-gutter; }
+
+  }
+}
+
+@include MQ(Mplus) {
+  .logo-1  { align-self: flex-start; }
+  .logo-2  { align-self: center; }
+  .logo-3  { align-self: flex-end; }
+}
+
+
+.logo-1,
+.logo-2,
+.logo-3 {
+  flex: 1 1 auto;
+  padding: 0 1rem;
+  @include MQ(Mplus) {
+    padding: 1rem 0;
+  }
+}
+
+.fxg--col__1,
+.fxg--col__2,
+.fxg--col__3,
+.fxg--col__4,
+.fxg--col__5,
+.fxg--col__6,
+.fxg--col__7,
+.fxg--col__8,
+.fxg--col__9,
+.fxg--col__10,
+.fxg--col__11,
+.fxg--col__12 {
+  padding: $fxg-gutter 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  flex-shrink: 1;
+
+  @include MQ(Mplus) {
+    padding: 0 $fxg-gutter;
+  }
+
+}
+
+$col-width: 100% / 12;
+
+@include MQ(Mplus) {
+
+}
+.fxg--col__1  { @include MQ(Mplus) { flex: 0  0  $col-width *  1; } }
+.fxg--col__2  { @include MQ(Mplus) { flex: 0  0  $col-width *  2; } }
+.fxg--col__3  { @include MQ(Mplus) { flex: 0  0  $col-width *  3; } }
+.fxg--col__4  { @include MQ(Mplus) { flex: 0  0  $col-width *  4; } }
+.fxg--col__5  { @include MQ(Mplus) { flex: 0  0  $col-width *  5; } }
+.fxg--col__6  { @include MQ(Mplus) { flex: 0  0  $col-width *  6; } }
+.fxg--col__7  { @include MQ(Mplus) { flex: 0  0  $col-width *  7; } }
+.fxg--col__8  { @include MQ(Mplus) { flex: 0  0  $col-width *  8; } }
+.fxg--col__9  { @include MQ(Mplus) { flex: 0  0  $col-width *  9; } }
+.fxg--col__10 { @include MQ(Mplus) { flex: 0  0  $col-width * 10; } }
+.fxg--col__11 { @include MQ(Mplus) { flex: 0  0  $col-width * 11; } }
+.fxg--col__12 { @include MQ(Mplus) { flex: 0  0  $col-width * 12; } }
+
+
+.flex__col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex__row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex__grow   {
+  flex: 1 1 auto;
+}
+.flex__shrink {
+  flex: 0 1 auto;
+}
+
+.flex__center {
+  align-items: center;
+  justify-content: center;
+}
+
+// .flex--img {
+//   flex: 0 0 auto;
+//   max-width: 100%;
+//   text-align: center;
+//   display: flex;
+// }
+
+.flex--img {
+  text-align: center;
+  position: relative;
+  img {
+    display: inline-block;
+  }
+}
+
+.flex__vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-address {
+  margin-bottom: .5rem;
+}

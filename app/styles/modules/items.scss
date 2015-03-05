@@ -1,0 +1,106 @@
+// Items
+
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.items__horizontal {
+  @include MQ(Mplus) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    .item,
+    .item--title,
+    .item--text {
+      max-width: 300px;
+    }
+  }
+}
+
+.item {
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 360px;
+  margin-bottom: 2rem;
+  line-height: 1.2em;
+
+  &:last-child {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+
+  @include MQ(Mplus) {
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
+
+
+
+}
+
+
+.item--icon {
+  margin-bottom: .75rem;
+}
+
+.item--title {
+  font-size: 1.25rem;
+  font-weight: $font-semibold;
+  margin-bottom: .25rem;
+  text-align: center;
+}
+
+.item--text {
+  flex: 0 1 auto;
+  text-align: center;
+  max-width: 100%;
+  order: 10;
+  flex-wrap: wrap;
+}
+
+.item--text__narrow {
+  max-width: 700px;
+}
+
+
+
+// Integration Logo Items
+
+.items__int-logos {
+  @extend .items__horizontal;
+
+  width: 75vw;
+  max-width: 900px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2rem 0;
+  order: 10;
+  @include MQ(Lplus) {
+    flex-wrap: nowrap;
+  }
+}
+
+.item__int-logo {
+  flex: 0 1 50%;
+  min-width: none;
+  padding: 0 1rem;
+  margin: 0;
+  height: 70px;
+  @include MQ(Lplus) {
+    flex: 0 1 25%;
+    margin: 0;
+
+  }
+  svg {
+    width: 100%;
+    max-width: 150px;
+  }
+
+}
+

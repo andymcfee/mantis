@@ -1,0 +1,129 @@
+//
+// Jumbotron
+// --------------------------------------------------
+
+.jumbotron {
+  background: $blue;
+  //background: radial-gradient(farthest-corner at 50% 60%, #5E6469 0%, #303336 100%);
+  border-top: 1px solid darken($slate, 5%);
+  //border-bottom: 1px solid darken($slate, 15%);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+
+
+  @include MQ(Mplus) {
+    margin-top: -$header-height;
+
+    padding-top: $header-height * 2;
+    padding-bottom: 0;
+
+    min-height: 600px + $header-height;
+    max-height: 75vh;
+  }
+
+  .video-container {
+    margin-bottom: 2rem;
+  }
+
+}
+
+.jumbotron__no-pad-bottom {
+  @include MQ(Splus) {
+    padding-bottom: 0 !important;
+  }
+}
+
+.jumbotron__home     { background: $blue; }
+.jumbotron__blue     { background: $blue; }
+.jumbotron__orange   { background: $orange; }
+.jumbotron__purple   { background: $purple; }
+.jumbotron__red      { background: $red; }
+.jumbotron__green    { background: $green; }
+.jumbotron__grey     { background: $grey-dark; }
+
+
+
+.jumbotron--img__full {
+  display: none;
+  @include MQ(Splus) {
+    display: block;
+  }
+}
+
+.jumbotron__home,
+.jumbotron__blue {
+  .jumbotron--title,
+  .jumbotron--text {
+
+  }
+}
+
+.jumbotron--title,
+.jumbotron--text {
+  color: rgba(white, .95);
+  margin: 0;
+
+  .jumbotron__home &   { text-shadow: 2px 2px 1px darken($blue, 15%);}
+  .jumbotron__blue &   { text-shadow: 2px 2px 1px darken($blue, 15%);}
+  .jumbotron__orange & { text-shadow: 2px 2px 1px darken($orange, 5%);}
+  .jumbotron__purple & { text-shadow: 2px 2px 1px darken($purple, 15%);}
+  .jumbotron__red &    { text-shadow: 2px 2px 1px darken($red, 15%);}
+  .jumbotron__green &  { text-shadow: 2px 2px 1px darken($green, 7%);}
+}
+
+.jumbotron--title {
+  font-size: 1.5rem;
+  font-size: 6.5vw;
+  font-weight: $font-bold;
+  text-align: center;
+  margin-bottom: .25em;
+  @include MQ(Splus) { font-size: 2rem; }
+  @include MQ(Mplus) { font-size: 3rem; }
+}
+
+.jumbotron--title__thin {
+  @extend .jumbotron--title;
+  font-weight: $font-light;
+}
+
+.jumbotron--text {
+  text-align: center;
+  font-weight: $font-light;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.25em;
+  max-width: 70%;
+  @include MQ(Splus) {
+    font-size: 1.125rem;
+  }
+  @include MQ(Mplus) {
+    font-size: 1.25rem;
+    max-width: none;
+  }
+}
+
+
+
+.jumbotron--cta {
+  margin-bottom: 1rem;
+}
+
+.jumbotron--subtext {
+  color: rgba(white, .5);
+  font-size: .75rem;
+  margin-top: .25rem;
+}
+
+.jumbotron__pricing {
+  @include MQ(Mplus) {
+    .jumbotron--title {
+      margin-top: -15rem;
+    }
+  }
+}

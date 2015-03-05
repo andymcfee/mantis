@@ -1,0 +1,367 @@
+//
+// Page elements (Header, Footer)
+// --------------------------------------------------
+
+//  Page Header
+.page--header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex: 0 1 auto;
+  padding-top: 0;
+  padding-bottom:0;
+  width: 100%;
+  justify-content: center;
+  align-self: center;
+  background: white;
+  transition: $trans-timing $trans-timing all;
+  background: linear-gradient(to bottom, rgba(white, .95) 0%, rgba(white, .85) 100%); /* W3C */
+  z-index: $z-page-header;
+
+  height: $header-height;
+
+  box-shadow: 0 1px 0 0 darken($body-bg, 5%);
+  @include MQ(Mplus) {
+    position: fixed;
+    top: 0;
+
+    transition: $trans-duration $trans-timing height;
+    &.smaller {
+      height: $header-height - 10;
+    }
+  }
+}
+
+
+@include MQ(Mplus) {
+  .transparent-header {
+    &:not(.fixed-header) {
+      position: absolute;
+      background: transparent;
+      border-bottom-color: transparent;
+      box-shadow: none;
+      .logo--path {fill:white;}
+      .logo--path__icon-inner {fill:transparent}
+      .nav--link {
+        color: white;
+        text-shadow: 1px 1px 0 rgba(black, .4);
+        box-shadow: inset 0 0 0 0 white;
+        &:hover,
+        &.active,
+        &:focus {
+          box-shadow: inset 0 3px 0 0 white;
+          background: transparent;
+        }
+      }
+      .btn-primary {
+        background: transparent;
+        border: 1px solid white;
+
+        box-shadow: none;
+        text-shadow: 1px 1px 0 rgba(black, .4);
+        font-weight: $font-light;
+        &:hover {
+          background: rgba(white, .08);
+        }
+      }
+    }
+
+    &.fixed-header {
+      top: -$header-height;
+      transition: $trans-duration $trans-timing all;
+      &.smaller {
+        top: 0;
+      }
+    }
+  }
+}
+
+.header--container {
+  @include content-width;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex: 1 1 auto;
+  padding: 0 1rem;
+  width: 100%;
+  justify-content: space-between;
+  align-self: center;
+  height: $header-height;
+  @include MQ(Mplus) {
+    flex-direction: row;
+  }
+}
+
+.header--logo {
+  padding: 0;
+  flex: 0 1 200px;
+  svg {
+    width: 200px;
+    height: 51px;
+  }
+}
+
+.header--main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 $header-height;
+  position: relative;
+  background-color: white;
+
+  @include MQ(Mplus) {
+    flex: 0 1 200px;
+    order: 1;
+    background-color: transparent;
+  }
+}
+.header--nav {
+  flex: 0 1 auto;
+  margin: 0;
+  padding: 0 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: absolute;
+  top: $header-height;
+  left: 0;
+  right: 0;
+  background: white;
+  transition: $trans-duration $trans-timing transform;
+  transform: translateY(-100%);
+  &.nav__show {
+    transform: translateY(0);
+  }
+
+  li {
+    font-size: 1rem;
+    flex: 1 0 auto;
+    display: flex;
+  }
+
+  @include MQ(Mplus) {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    flex: 0 1 auto;
+    transform: translateY(0);
+    transition: none;
+    padding: 0;
+    order: 2;
+    background-color: transparent;
+    overflow: visible;
+  }
+}
+
+  .nav--btn__contain {
+    align-items: center;
+    justify-content: center;
+    padding: .5rem 0;
+    @include MQ(Mplus) {
+      padding: 0;
+      margin-left: 1rem;
+    }
+  }
+
+  .nav--toggle,
+  .nav--toggle:focus {
+    user-select: none;
+    color: lighten($grey-light, 10%);
+    font-size: 2rem;
+    padding: .75rem 1rem 1rem 2rem;
+    flex: 0 1 auto;
+    cursor: pointer;
+    outline: 0;
+
+    &:hover {
+      color: $grey-light;
+    }
+    &.active,
+    &.active:hover
+    &.active:focus {
+      color: $green;
+    }
+    @include MQ(Mplus) {
+      display: none;
+    }
+  }
+
+  .nav--link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1 0 auto;
+
+    box-shadow: inset 0 0 0 0 $green;
+    color: $text-color;
+    font-weight: $font-light;
+    padding: 1rem 0;
+    //text-transform: uppercase;
+    text-decoration: none;
+    transition: 250ms ease-in-out box-shadow;
+    user-select: none;
+
+
+
+    &:hover,
+    &:focus {
+      outline: 0;
+      color: $text-color;
+      text-decoration: none;
+      background: rgba($green, .15);
+    }
+    &.active {
+      background: rgba($green, .3);
+    }
+
+    @include MQ(Mplus) {
+      background: transparent;
+      padding: 0 1rem;
+      &:hover,
+      &.active,
+      &:focus {
+        box-shadow: inset 0 3px 0 0 $green;
+        background: transparent;
+      }
+    }
+  }
+
+// Page Footer
+$footer-color: lighten($text-color, 30%);
+.page--footer {
+  align-self: stretch;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: darken($grey-lighter, 3%);
+  border-top: 1px solid darken($body-bg, 7%);
+  color: $footer-color;
+  font-weight: $font-light;
+  line-height: 1.5rem;
+  font-size:.875rem;
+  //text-shadow: 1px 1px 0 darken($slate, 10%);
+  @include section-padding(2rem, 2rem, 2rem);
+
+  .content-container {
+    max-width: 450px;
+
+    @include MQ(Splus) {
+      max-width: $content-width-sm;
+    }
+
+    @media(min-width: $content-width-sm + 38) {
+      padding: 0;
+    }
+    @media(min-width: $content-width-md + 38) {
+      max-width: $content-width-md;
+    }
+    @media(min-width: $content-width-lg + 38) {
+      max-width: $content-width-lg;
+    }
+  }
+}
+
+
+
+.footer--title {
+  padding-top: .875rem;
+  font-size: .875rem;
+  //text-transform: uppercase;
+  font-weight: $font-bold;
+  color: darken($footer-color, 5%);
+}
+
+.footer--logo {
+  width: 140px;
+  height: 36px;
+  display: inline-block;
+  .logo-svg {
+	  width: inherit;
+	  height: inherit;
+  }
+  .logo--path {
+    fill: darken($footer-color, 5%);
+  }
+  .logo--path.logo--path__icon-inner {
+    fill: none;
+  }
+}
+
+.footer--sub-title {
+  font-size: 1rem;
+  font-weight: $font-semibold;
+  color: $footer-color;
+}
+
+.footer--section {
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  @include MQ(Mplus) {
+    text-align: left;
+    align-items: flex-start;
+  }
+}
+
+.footer--section__main {
+  @include MQ(Mplus) {
+    align-items: flex-start;
+  }
+}
+
+.footer--bb-links {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+
+  .footer--list {
+    padding: 0 1rem;
+  }
+
+  @include MQ(Mplus) {
+    justify-content: flex-start;
+    .footer--list {
+      padding: 0;
+      flex: 0 0 50%;
+    }
+  }
+}
+
+.footer--list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  li {
+    flex: 0 1 auto;
+    display: flex;
+  }
+  @include MQ(Mplus) {
+    align-items: flex-start;
+    &.pad-left {
+      padding-left: 2.5rem;
+    }
+  }
+
+}
+
+.footer-nav--link {
+  font-weight: $font-light;
+  color: $footer-color;
+  text-shadow: none;
+  &:hover {
+    color: $footer-color;
+  }
+}

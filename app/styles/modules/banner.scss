@@ -1,0 +1,78 @@
+// Banner
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  text-align: center;
+  background: $green;
+  color: white;
+  padding: 3rem 1rem;
+  text-shadow: 1px 1px 0 darken($green, 5%);
+  transition: $trans-duration $trans-timing all;
+
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.banner__purple {
+ background: $purple;
+ text-shadow: 1px 1px 0 darken($purple, 5%);
+}
+.banner__green {
+ background: $green;
+ text-shadow: 1px 1px 0 darken($green, 5%);
+}
+.banner__blue {
+ background: $blue;
+ text-shadow: 1px 1px 0 darken($blue, 5%);
+}
+.banner__red {
+ background: $red;
+ text-shadow: 1px 1px 0 darken($red, 5%);
+}
+.banner__orange {
+ background: $orange;
+ text-shadow: 1px 1px 0 darken($orange, 5%);
+}
+
+
+.banner--text__small {
+  font-size: 1rem;
+  font-weight: $font-light;
+}
+
+.banner--title {
+  font-size: 3.25rem;
+  font-size: 1.5rem;
+  margin: .5rem 0;
+  @include MQ(Splus) {
+    font-size: 2.25rem;
+    font-size: 6.5vw;
+    margin: 0 0 .5rem;
+  }
+  @include MQ(Mplus) {
+    font-size: 3.25rem;
+  }
+
+
+  font-weight: $font-light;
+  transform: translateX(0);
+
+  text-shadow: 1px 1px 0 darken($green, 5%);
+  transition: $trans-duration $trans-timing all;
+
+  .banner:hover & {
+    transform: translateX(5px);
+    text-shadow: 4px 4px 0 darken($green, 5%);
+  }
+}
+
+.banner--icon {
+  width: 40px;
+  height: 40px;
+}

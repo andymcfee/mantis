@@ -1,0 +1,25 @@
+// SVG Icons
+.icon {
+  width: 60px;
+  height: 60px;
+  fill: $text-color;
+  display: inline-block;
+}
+
+
+
+.icon__white         { fill: white; }
+.icon__grey-lighter  { fill: $grey-lighter; }
+.icon__grey-light    { fill: $grey-light; }
+.icon__grey          { fill: $grey; }
+.icon__grey-dark     { fill: $grey-dark; }
+.icon__grey-darker   { fill: $grey-darker; }
+.icon__black         { fill: black; }
+
+.icon__orange        { fill: $orange; }
+.icon__blue          { fill: $blue; }
+.icon__green         { fill: $green; }
+.icon__red           { fill: $red; }
+.icon__purple        { fill: $purple; }
+.icon__color         { fill: $bb-grey-light; }
+
