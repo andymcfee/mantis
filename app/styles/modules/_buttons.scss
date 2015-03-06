@@ -98,13 +98,14 @@
   &:active,
   &[disabled],
   fieldset[disabled] & {
-    background-color: transparent;
+    background: transparent;
     @include box-shadow(none);
   }
   &,
   &:hover,
   &:focus,
   &:active {
+    background: none;
     border-color: transparent;
     box-shadow: none;
   }
@@ -112,12 +113,13 @@
   &:focus {
     color: $link-hover-color;
     text-decoration: underline;
-    background-color: transparent;
+    background: transparent;
   }
   &[disabled],
   fieldset[disabled] & {
     &:hover,
     &:focus {
+      background: transparent;
       color: $btn-link-disabled-color;
       text-decoration: none;
     }
@@ -137,9 +139,11 @@
 .btn-sm {
   // line-height: ensure proper height of button next to small input
   @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+  font-weight: $font-regular;
 }
 .btn-xs {
   @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+  font-weight: $font-regular;
 }
 
 

@@ -7,11 +7,11 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-darker:            #474C50 !default; // #222
-$gray-dark:              #5E6469 !default;   // #333
+$gray-darker:            #292D30 !default; // #222
+$gray-dark:              #505659 !default;   // #333
 $gray:                   #697076 !default; // #555
 $gray-light:             #A3ACB6 !default; // #777
-$gray-lighter:           #eee !default; // #eee
+$gray-lighter:           #F0F2F5 !default; // #eee
 
 $grey-darker:            $gray-darker !default;
 $grey-dark:              $gray-dark !default;
@@ -202,8 +202,8 @@ $table-border-color:            #ddd !default;
 $btn-font-weight:                $font-semibold !default;
 
 $btn-default-color:              $text-color !default;
-$btn-default-bg:                 white !default;
-$btn-default-border:             #ccc !default;
+$btn-default-bg:                 darken($grey-lighter, 1) !default;
+$btn-default-border:             darken($btn-default-bg, 5%) !default;
 
 $btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;
