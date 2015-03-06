@@ -13,8 +13,13 @@ module.exports = function (grunt) {
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
-  // Load grunt tasks automatically
-  require('load-grunt-tasks')(grunt);
+  // Load Grunt packages at they are needed
+  require('jit-grunt')(grunt);
+
+  // JIT grunt tasks automatically
+  require('jit-grunt')(grunt, {
+    useminPrepare: 'grunt-usemin',
+  });
 
   // Configurable paths
   var config = {
@@ -361,7 +366,16 @@ module.exports = function (grunt) {
         'imagemin',
         'svgmin'
       ]
+    },
+
+    // Deploys to Github Pages
+    'gh-pages': {
+      options: {
+        base: 'dist'
+      },
+      src: '**/*'
     }
+
   });
 
 
@@ -418,9 +432,17 @@ module.exports = function (grunt) {
     'htmlmin'
   ]);
 
+  grunt.registerTask('deploy', [
+    'newer:jshint',
+    'test',
+    'build',
+    'gh-pages'
+  ]);
+
   grunt.registerTask('default', [
     'newer:jshint',
     'test',
     'build'
   ]);
+
 };
