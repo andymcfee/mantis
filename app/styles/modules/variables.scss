@@ -202,8 +202,8 @@ $table-border-color:            #ddd !default;
 $btn-font-weight:                $font-semibold !default;
 
 $btn-default-color:              $text-color !default;
-$btn-default-bg:                 darken($grey-lighter, 1) !default;
-$btn-default-border:             darken($btn-default-bg, 5%) !default;
+$btn-default-bg:                 darken($grey-lighter, 4) !default;
+$btn-default-border:             darken($btn-default-bg, 8%) !default;
 
 $btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;
