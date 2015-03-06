@@ -71,3 +71,18 @@ body {
   &.purple  { background-color: $purple; }
 
 }
+
+
+.m-modal-example {
+  width: 100%;
+  min-height: 600px;
+  position: relative;
+
+  .modal-backdrop {
+    position: absolute;
+  }
+  .modal {
+    display: block;
+    position: absolute;
+  }
+}

@@ -9,6 +9,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -146,14 +147,79 @@
             <span class="m-color-variable">$purple</span>
           </li>
 
-
         </ul>
-
-
-
 
       </section>
 
+
+      <section class="m-section">
+        <h2>Modals</h2>
+        <div class="m-modal-example">
+          <div id="modal-overlay" class="modal-backdrop fade in"></div>
+
+          <div id="modal" class="modal fade in">
+            <div class="modal-dialog" data-action="close-overlay">
+              <div class="modal-content">
+                <div class="modal-header">
+
+                  <h1 class="modal-title">
+                    Modal Title
+                  </h1>
+
+                  <div class="modal-close"
+                    data-dismiss="modal" data-action="close">
+                    <i class="fa fa-times"></i>
+                  </div>
+
+                </div>
+
+                <div class="modal-body">
+
+                  <p>
+                    Modal content. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ex nobis tempora sit nulla aspernatur, excepturi, amet dignissimos! Molestias iusto voluptatum error sint necessitatibus, laudantium ut laboriosam consectetur delectus voluptate?
+                  </p>
+
+                  <form action="" class="modal-form">
+                    <input type="text" class="input form--input" placeholder="Placeholder text">
+                  </form>
+
+                  <p>
+                    An input field to capture information from the user.
+                  </p>
+
+                </div>
+
+                <div class="modal-footer">
+                  <div class="modal-subactions">
+                    <label class="control checkbox">
+                      <input type="checkbox">
+                      <span class="control-indicator"></span>
+                      Do not show this modal in the future
+                    </label>
+                  </div>
+                  
+                  <div class="modal-actions">
+                    <div class="btn-contain">
+                      <a href="#" class="btn btn-default" data-dismiss="modal" data-action="close">Cancel</a>
+                      <span class="btn-sublabel">ESC</span>
+                    </div>
+
+                    <div class="btn-contain">
+                      <a href="#" class="btn btn-primary" data-dismiss="modal" data-action="nextPane">Confirm</a>
+                      <span class="btn-sublabel">Enter</span>
+                    </div>
+
+                  </div>
+
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
 
 
     </div>
