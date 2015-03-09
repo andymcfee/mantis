@@ -123,7 +123,7 @@ $modal-inner-padding: 16px;
 .form--input {
   padding: 16px;
   font-size: 18px;
-  color: $grey-light;
+  color: $text-color;
   border-radius: 3px;
   border: 1px solid rgba($gray-light, .5);
   background-color: rgba($blue, 0);
@@ -134,17 +134,17 @@ $modal-inner-padding: 16px;
     outline: 0;
   }
   &::-webkit-input-placeholder {
-     color: darken($gray-lighter, 17);
+    color: darken($gray-lighter, 17);
     text-shadow: 1px 1px 0 white;
   }
 
   &::-moz-placeholder {  /* Firefox 19+ */
-     color: darken($gray-lighter, 17);
+    color: darken($gray-lighter, 17);
     text-shadow: 1px 1px 0 white;
   }
 
   &:-ms-input-placeholder {
-     color: darken($gray-lighter, 17);
+    color: darken($gray-lighter, 17);
     text-shadow: 1px 1px 0 white;
   }
 }
@@ -381,4 +381,16 @@ $input-group-border-color: lighten(#000, 75.7%);
   border-color: $orange;
   background-color: lighten($orange, 40);
   color: $orange;
+}
+
+.modal-dl {
+  margin: 0 0 $modal-inner-padding;
+  padding: 0;
+  dt {
+    font-size: 18px;
+    color: $gray-dark;
+  }
+  dd {
+    padding-left: 24px;
+  }
 }
