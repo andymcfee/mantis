@@ -1,10 +1,12 @@
+$modal-transition-duration: 300ms;
+
 .hide {
   display: none !important;
 }
 
 .fade {
   opacity: 0;
-  transition: 150ms linear opacity, color;
+  transition: $modal-transition-duration linear opacity, color;
   &.in {
     opacity: 1;
   }
@@ -30,7 +32,7 @@
   // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {
     transform: translateY(-25%);
-    transition: 0.3s ease-out transform;
+    transition: $modal-transition-duration ease-out transform;
   }
   &.in .modal-dialog {
     transform: translateY(0);
