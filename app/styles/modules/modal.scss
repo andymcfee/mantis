@@ -230,12 +230,12 @@ $input-group-border-color: lighten(#000, 75.7%);
 }
 
 .btn-contain {
-  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-right: 12px;
+
   &:last-child {
     margin-right: 0;
   }
