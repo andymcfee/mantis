@@ -6,18 +6,8 @@
 @mixin button-variant($color, $background, $border) {
   color: $color;
   background-color: $background;
-  background: linear-gradient(to bottom, lighten(saturate($background, 5), 5) 0%, $background 100%) 0 0 repeat-x, lighten(saturate($background, 5), 5) ;
-  border: 1px solid $border;
-  border-color: $border;
-  transition:
-    $trans-duration $trans-timing background,
-    $trans-duration $trans-timing text-shadow;
-  text-shadow: 1px 1px 2px darken($background, 10%);
 
-  box-shadow:
-    inset 0 2px 0 -1px lighten(saturate($background, 10), 10),
-    inset 0 -2px 0 -1px darken($background, 5);
-
+  transition: 150ms $trans-timing background-color;
 
   &:hover,
   &:focus,
@@ -25,17 +15,12 @@
   &.active,
   .open > &.dropdown-toggle {
     color: $color;
-    background: linear-gradient(to bottom, $background 0%, darken($background, 4) 100%) 0 0 repeat-x, lighten(saturate($background, 5), 5);
-    text-shadow: 3px 3px 2px darken($background, 10%);
-    box-shadow:
-      inset 0 2px 0 -1px lighten(saturate($background, 10), 10),
-      inset 0 -2px 0 -1px darken($background, 5);
-        //border-color: darken($border, 4%);
+    background-color: darken($background, 8%);
   }
   &:active,
   &.active,
   .open > &.dropdown-toggle {
-    text-shadow: 0 0 2px darken($background, 10%);
+    transform: translateY(1px);
   }
   &.disabled,
   &[disabled],

@@ -396,6 +396,7 @@ $input-group-border-color: lighten(#000, 75.7%);
   }
   dd {
     padding-left: 24px;
+    margin: 0;
     &:not(:last-child) {
       margin-bottom: $modal-inner-padding;
     }

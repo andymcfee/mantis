@@ -199,7 +199,7 @@ $table-border-color:            #ddd !default;
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-font-weight:                $font-semibold !default;
+$btn-font-weight:                $font-regular !default;
 
 $btn-default-color:              $text-color !default;
 $btn-default-bg:                 darken($grey-lighter, 4) !default;
