@@ -58,7 +58,7 @@ module.exports = function (grunt) {
         tasks: ['sass:server', 'autoprefixer']
       },
       styles: {
-        files: ['<%= config.app %>/styles/{,*/}*.css'],
+        files: ['.tmp/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
       },
       livereload: {
