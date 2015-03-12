@@ -39,6 +39,23 @@ body {
 
 }
 
+.m-example {
+  margin: 1rem 0;
+  .radio,
+  .progress {
+    display: block;
+  }
+}
+
+.m-title {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.m-subtitle {
+  font-size: 1.25rem;
+}
+
 .m-colors {
   margin: 0;
   padding: 0;

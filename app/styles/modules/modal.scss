@@ -283,7 +283,9 @@ $input-group-border-color: lighten(#000, 75.7%);
   padding: 0;
   display: flex;
   flex-direction: column;
-
+  .input-text {
+    width: 100%;
+  }
 }
 
 //

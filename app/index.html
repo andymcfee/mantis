@@ -36,7 +36,7 @@
     <div class="m-container">
 
       <section class="m-section">
-        <h2>Buttons</h2>
+        <h2 class="m-title">Buttons</h2>
 
         <div class="m-items__free">
           <a href="#" class="btn">btn</a>
@@ -66,15 +66,132 @@
           <a href="#" class="btn btn-primary btn-block btn-xl">btn-block btn-xl</a>
         </div>
 
+      </section>
+
+      <section class="m-section" id="forms">
+        <h2 class="m-title">Forms</h2>
+
+        <h3 class="m-subtitle">Text Input</h3>
+
+        <div class="input-text">
+          <input type="text" placeholder="Type something">
+        </div>
+
+        <div class="input-text">
+          <input type="text" placeholder="Type something" value="Disabled" disabled>
+        </div>
+
+        <h3 class="m-subtitle">Text Area</h3>
+
+        <div class="textarea">
+          <textarea placeholder="Type something longer"></textarea>
+        </div>
+
+        <div class="textarea">
+          <textarea placeholder="Type something longer" disabled>Disabled</textarea>
+        </div>
 
 
+
+        <h3 class="m-subtitle">Checkboxes</h3>
+
+        <div class="m-example">
+          <label class="control checkbox">
+            <input type="checkbox">
+            <span class="control-indicator"></span>
+            Check this custom checkbox
+          </label>
+        </div>
+
+        <h3 class="m-subtitle">Radios</h3>
+        <div class="m-example">
+          <label class="control radio">
+            <input id="radio1" name="radio" type="radio">
+            <span class="control-indicator"></span>
+            Toggle this custom radio
+          </label>
+
+          <label class="control radio">
+            <input id="radio2" name="radio" type="radio">
+            <span class="control-indicator"></span>
+            Or toggle this other custom radio
+          </label>
+        </div>
+
+
+        <h3 class="m-subtitle">Select menu</h3>
+        <div class="m-example">
+          <div class="select">
+            <select aria-label="Select menu example">
+              <option selected>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="m-example">
+          <div class="select-group__flex">
+            <span>Choose: </span>
+
+            <div class="select">
+              <select aria-label="Select menu example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+
+            <span>or</span>
+
+            <div class="select">
+              <select aria-label="Select menu example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+
+        <h3 class="m-subtitle">File browser</h3>
+        <div class="m-example">
+          <label class="file">
+            <input type="file" id="file" aria-label="File browser example">
+            <span class="file-custom"></span>
+          </label>
+        </div>
+
+
+
+        <h3 class="m-subtitle">Progress</h3>
+
+        <div class="m-example">
+          <progress class="progress" value="25" max="100">
+            25%
+          </progress>
+          <progress class="progress" value="50" max="100">
+            50%
+          </progress>
+          <progress class="progress" value="75" max="100">
+            75%
+          </progress>
+          <progress class="progress" value="100" max="100">
+            100%
+          </progress>
+
+        </div>
 
       </section>
 
       <section class="m-section">
-        <h2>Colors</h2>
+        <h2 class="m-title">Colors</h2>
 
-        <h3>Greys</h3>
+        <h3 class="m-subtitle">Greys</h3>
         <ul class="m-colors">
           <li>
             <div class="m-color-tile black"> </div>
@@ -127,7 +244,7 @@
 
         </ul>
 
-        <h3>Greys</h3>
+        <h3 class="m-subtitle">Greys</h3>
         <ul class="m-colors">
           <li>
             <div class="m-color-tile blue"> </div>
@@ -161,7 +278,7 @@
 
 
       <section class="m-section">
-        <h2>Modals</h2>
+        <h2 class="m-title">Modals</h2>
         <div class="m-modal-example">
           <div class="modal-backdrop fade in"></div>
 
@@ -201,7 +318,9 @@
                   </dl>
 
                   <form action="" class="modal-form">
-                    <input type="text" class="input form--input" placeholder="Placeholder text">
+                    <div class="input-text input-text__flex">
+                      <input type="text" placeholder="Placeholder text">
+                    </div>
                   </form>
 
                   <p>
