@@ -109,12 +109,12 @@
   flex-direction: row;
   align-items: center;
   margin-bottom: 16px;
-  span {
+  > span,
+  > div {
     flex: 0 0 auto;
     padding: 0 8px;
     &:first-child { padding-left: 0; }
     &:last-child { padding-right: 0; }
-
   }
 
   .select {
