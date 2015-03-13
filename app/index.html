@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>mantis</title>
+    <title>Mantis - BugBuster's UI Framework</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -12,17 +12,17 @@
     <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
+    <!-- build:css(.tmp) styles/main.css <-->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/docs.css">
-
     <!-- endbuild -->
+    <script src="//use.typekit.net/oex8wnq.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
   </head>
   <body>
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
 
     <section class="jumbotron jumbotron__purple">
       <h1 class="jumbotron--title">
@@ -35,35 +35,137 @@
 
     <div class="m-container">
 
-      <section class="m-section">
-        <h2 class="m-title">Buttons</h2>
+      <section class="m-section" id="typography">
 
-        <div class="m-items__free">
-          <a href="#" class="btn">btn</a>
-          <a href="#" class="btn btn-primary">btn btn-primary</a>
-          <a href="#" class="btn btn-default">btn btn-default</a>
-          <a href="#" class="btn btn-info">btn btn-info</a>
-          <a href="#" class="btn btn-warning">btn btn-warning</a>
-          <a href="#" class="btn btn-danger">btn btn-danger</a>
-          <a href="#" class="btn btn-link">btn btn-link</a>
+        <h2 class="m-title">
+          Typography
+        </h2>
+
+        <h3 class="m-subtitle" id="basic-text">
+          Basic Text
+        </h3>
+
+        <div class="m-example">
+          <div class="m-example--demo">
+            <p>Standard paragraph tags.</p>
+            <p>Great for separating lines of text.</p>
+            <p>Add <em>emphasis</em> or <strong>be bold</strong>.</p>
+            <p>Or <a href="#">add links to other places</a>.</p>
+          </div>
+
+          <div class="m-example--code">
+<pre class="language-markup"><code class="language-markup">
+&lt;p&gt;Standard paragraph tags.&lt;/p&gt;
+&lt;p&gt;Great for separating lines of text.&lt;/p&gt;
+&lt;p&gt;Add &lt;em&gt;emphasis&lt;/em&gt; or &lt;strong&gt;be bold&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Or &lt;a href=&quot;#&quot;&gt;add links to other places&lt;/a&gt;.&lt;/p&gt;
+</code></pre>
+          </div>
         </div>
 
-        <h4>Sizes</h4>
-        <div class="m-items__free">
-          <a href="#" class="btn btn-primary btn-xs">btn-xs</a>
-          <a href="#" class="btn btn-primary btn-sm">btn-sm</a>
-          <a href="#" class="btn btn-primary">btn</a>
-          <a href="#" class="btn btn-primary btn-lg">btn-lg</a>
-          <a href="#" class="btn btn-primary btn-xl">btn-xl</a>
+        <h2 class="m-subtitle">
+          Headers
+        </h2>
+        <div class="m-example">
+          <div class="m-example--demo">
+            <h1>H1 Header</h1>
+            <h2>H2 Header</h2>
+            <h3>H3 Header</h3>
+            <h4>H4 Header</h4>
+            <h5>H5 Header</h5>
+            <h6>H6 Header</h6>
+          </div>
+          <div class="m-example--code">
+<pre class="language-markup"><code class="language-markup">
+&lt;h1&gt;H1 Header&lt;/h1&gt;
+&lt;h2&gt;H2 Header&lt;/h2&gt;
+&lt;h3&gt;H3 Header&lt;/h3&gt;
+&lt;h4&gt;H4 Header&lt;/h4&gt;
+&lt;h5&gt;H5 Header&lt;/h5&gt;
+&lt;h6&gt;H6 Header&lt;/h6&gt;
+</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="m-section" id="buttons">
+
+        <h2 class="m-title">
+          Buttons
+        </h2>
+
+        <h3 class="m-subtitle" id="button-variants">
+          Button Variants
+        </h3>
+
+        <div class="m-example">
+          <div class="m-example--demo">
+            <a href="#" class="btn">btn</a>
+            <a href="#" class="btn btn-primary">btn btn-primary</a>
+            <a href="#" class="btn btn-default">btn btn-default</a>
+            <a href="#" class="btn btn-info">btn btn-info</a>
+            <a href="#" class="btn btn-warning">btn btn-warning</a>
+            <a href="#" class="btn btn-danger">btn btn-danger</a>
+            <a href="#" class="btn btn-link">btn btn-link</a>
+          </div>
+          <div class="m-example--code">
+<pre class="language-markup"><code class="language-markup">
+&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;btn&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;btn btn-primary&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-default&quot;&gt;btn btn-default&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-info&quot;&gt;btn btn-info&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-warning&quot;&gt;btn btn-warning&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-danger&quot;&gt;btn btn-danger&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-link&quot;&gt;btn btn-link&lt;/a&gt;
+</code></pre>
+          </div>
         </div>
 
-        <h4>Blocks</h4>
-        <div class="m-items__free">
-          <a href="#" class="btn btn-primary btn-block btn-xs">btn-block btn-xs</a>
-          <a href="#" class="btn btn-primary btn-block btn-sm">btn-block btn-sm</a>
-          <a href="#" class="btn btn-primary btn-block">btn-block btn</a>
-          <a href="#" class="btn btn-primary btn-block btn-lg">btn-block btn-lg</a>
-          <a href="#" class="btn btn-primary btn-block btn-xl">btn-block btn-xl</a>
+
+
+        <h3 class="m-subtitle">
+          Sizes
+        </h3>
+
+        <div class="m-example">
+          <div class="m-example--demo">
+            <a href="#" class="btn btn-primary btn-xs">btn-xs</a>
+            <a href="#" class="btn btn-primary btn-sm">btn-sm</a>
+            <a href="#" class="btn btn-primary">btn</a>
+            <a href="#" class="btn btn-primary btn-lg">btn-lg</a>
+            <a href="#" class="btn btn-primary btn-xl">btn-xl</a>
+          </div>
+          <div class="m-example--code">
+<pre class="language-markup"><code class="language-markup">
+&lt;a href=&quot;#&quot; class=&quot;btn btn-primary btn-xs&quot;&gt;btn-xs&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-primary btn-sm&quot;&gt;btn-sm&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;btn&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-primary btn-lg&quot;&gt;btn-lg&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-primary btn-xl&quot;&gt;btn-xl&lt;/a&gt;
+</code></pre>
+          </div>
+        </div>
+
+        <h3 class="m-subtitle">
+          Blocks
+        </h3>
+        <div class="m-example">
+          <div class="m-example--demo">
+            <a href="#" class="btn btn-primary btn-block btn-xs">btn-block btn-xs</a>
+            <a href="#" class="btn btn-primary btn-block btn-sm">btn-block btn-sm</a>
+            <a href="#" class="btn btn-primary btn-block">btn-block btn</a>
+            <a href="#" class="btn btn-primary btn-block btn-lg">btn-block btn-lg</a>
+            <a href="#" class="btn btn-primary btn-block btn-xl">btn-block btn-xl</a>
+          </div>
+          <div class="m-example--code">
+<pre class="language-markup"><code class="language-markup">
+&lt;a href=&quot;#&quot; class=&quot;btn btn-primary btn-block btn-xs&quot;&gt;btn-block btn-xs&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-primary btn-block btn-sm&quot;&gt;btn-block btn-sm&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-primary btn-block&quot;&gt;btn-block btn&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-primary btn-block btn-lg&quot;&gt;btn-block btn-lg&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-primary btn-block btn-xl&quot;&gt;btn-block btn-xl&lt;/a&gt;
+</code></pre>
+          </div>
         </div>
 
       </section>
@@ -71,81 +173,125 @@
       <section class="m-section" id="forms">
         <h2 class="m-title">Forms</h2>
 
-        <h3 class="m-subtitle">Text Input</h3>
-
-        <div class="input-text">
-          <input type="text" placeholder="Type something">
-        </div>
-
-        <div class="input-text">
-          <input type="text" placeholder="Type something" value="Disabled" disabled>
-        </div>
-
-        <h3 class="m-subtitle">Text Area</h3>
-
-        <div class="textarea">
-          <textarea placeholder="Type something longer"></textarea>
-        </div>
-
-        <div class="textarea">
-          <textarea placeholder="Type something longer" disabled>Disabled</textarea>
-        </div>
-
-
-
-        <h3 class="m-subtitle">Checkboxes</h3>
+        <h3 class="m-subtitle" id="text-inputs">
+          Text Input
+        </h3>
 
         <div class="m-example">
-          <label class="control checkbox">
-            <input type="checkbox">
-            <span class="control-indicator"></span>
-            Check this custom checkbox
-          </label>
+          <div class="m-example--demo">
+            <div class="input-text">
+              <input type="text" placeholder="Type something">
+            </div>
+
+            <div class="input-text">
+              <input type="text" placeholder="Type something" value="Disabled" disabled>
+            </div>
+
+          </div>
+          <div class="m-example--code">
+<pre class="language-markup"><code class="language-markup">
+&lt;div class=&quot;input-text&quot;&gt;
+  &lt;input type=&quot;text&quot; placeholder=&quot;Type something&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;input-text&quot;&gt;
+  &lt;input type=&quot;text&quot; placeholder=&quot;Type something&quot; value=&quot;Disabled&quot; disabled&gt;
+&lt;/div&gt;
+</code></pre>
+          </div>
+        </div>
+
+
+        <h3 class="m-subtitle" id="textareas">
+          Text Areas
+        </h3>
+
+        <div class="m-example">
+          <div class="m-example--demo">
+            <div class="textarea">
+              <textarea placeholder="Type something longer"></textarea>
+            </div>
+
+            <div class="textarea">
+              <textarea placeholder="Type something longer" disabled>Disabled</textarea>
+            </div>
+          </div>
+          <div class="m-example--code">
+<pre class="language-markup"><code class="language-markup">
+&lt;div class=&quot;textarea&quot;&gt;
+  &lt;textarea placeholder=&quot;Type something longer&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;textarea&quot;&gt;
+  &lt;textarea placeholder=&quot;Type something longer&quot; disabled&gt;Disabled&lt;/textarea&gt;
+&lt;/div&gt;
+</code></pre>
+          </div>
+        </div>
+
+
+
+
+        <h3 class="m-subtitle" id="checkbox">
+          Checkboxes
+        </h3>
+
+        <div class="m-example">
+          <div class="m-example--demo">
+            <label class="control checkbox">
+              <input type="checkbox">
+              <span class="control-indicator"></span>
+              Check this custom checkbox
+            </label>
+          </div>
+          <div class="m-example--code">
+<pre class="language-markup"><code class="language-markup">
+&lt;label class=&quot;control checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;span class=&quot;control-indicator&quot;&gt;&lt;/span&gt;
+  Check this custom checkbox
+&lt;/label&gt;
+</code></pre>
+          </div>
         </div>
 
         <h3 class="m-subtitle">Radios</h3>
         <div class="m-example">
-          <label class="control radio">
-            <input id="radio1" name="radio" type="radio">
-            <span class="control-indicator"></span>
-            Toggle this custom radio
-          </label>
+          <div class="m-example--demo">
+            <label class="control radio">
+              <input id="radio1" name="radio" type="radio">
+              <span class="control-indicator"></span>
+              Toggle this custom radio
+            </label>
 
-          <label class="control radio">
-            <input id="radio2" name="radio" type="radio">
-            <span class="control-indicator"></span>
-            Or toggle this other custom radio
-          </label>
-        </div>
+            <label class="control radio">
+              <input id="radio2" name="radio" type="radio">
+              <span class="control-indicator"></span>
+              Or toggle this other custom radio
+            </label>
+          </div>
+          <div class="m-example--code">
+<pre class="language-markup"><code class="language-markup">
+&lt;label class=&quot;control radio&quot;&gt;
+  &lt;input id=&quot;radio1&quot; name=&quot;radio&quot; type=&quot;radio&quot;&gt;
+  &lt;span class=&quot;control-indicator&quot;&gt;&lt;/span&gt;
+  Toggle this custom radio
+&lt;/label&gt;
 
-
-        <h3 class="m-subtitle">Select menu</h3>
-        <div class="m-example">
-          <div class="select">
-            <select aria-label="Select menu example">
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
+&lt;label class=&quot;control radio&quot;&gt;
+  &lt;input id=&quot;radio2&quot; name=&quot;radio&quot; type=&quot;radio&quot;&gt;
+  &lt;span class=&quot;control-indicator&quot;&gt;&lt;/span&gt;
+  Or toggle this other custom radio
+&lt;/label&gt;
+</code></pre>
           </div>
         </div>
 
+        <h3 class="m-subtitle" id="selects">
+          Select menu
+        </h3>
         <div class="m-example">
-          <div class="select-group__flex">
-            <span>Choose: </span>
-
-            <div class="select">
-              <select aria-label="Select menu example">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-            </div>
-
-            <span>or</span>
-
+          <div class="m-example--demo">
             <div class="select">
               <select aria-label="Select menu example">
                 <option selected>Open this select menu</option>
@@ -155,35 +301,139 @@
               </select>
             </div>
           </div>
+          <div class="m-example--code">
+<pre class="language-markup"><code class="language-markup">
+&lt;div class=&quot;select&quot;&gt;
+  &lt;select aria-label=&quot;Select menu example&quot;&gt;
+    &lt;option selected&gt;Open this select menu&lt;/option&gt;
+    &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
+    &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
+    &lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;
+</code></pre>
+          </div>
+        </div>
+
+        <h3 class="m-subtitle">
+          Select Groups
+        </h3>
+        <div class="m-example">
+          <div class="m-example--demo">
+            <div class="select-group__flex">
+              <span>Choose: </span>
+
+              <div class="select">
+                <select aria-label="Select menu example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+
+              <span>or</span>
+
+              <div class="select">
+                <select aria-label="Select menu example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+          <div class="m-example--code">
+<pre class="language-markup"><code class="language-markup">
+&lt;div class=&quot;select-group__flex&quot;&gt;
+  &lt;span&gt;Choose: &lt;/span&gt;
+
+  &lt;div class=&quot;select&quot;&gt;
+    &lt;select aria-label=&quot;Select menu example&quot;&gt;
+      &lt;option selected&gt;Open this select menu&lt;/option&gt;
+      &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
+      &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
+      &lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+
+  &lt;span&gt;or&lt;/span&gt;
+
+  &lt;div class=&quot;select&quot;&gt;
+    &lt;select aria-label=&quot;Select menu example&quot;&gt;
+      &lt;option selected&gt;Open this select menu&lt;/option&gt;
+      &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
+      &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
+      &lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+          </div>
+        </div>
+
+        <h3 class="m-subtitle">
+          File browser
+        </h3>
+        <div class="m-example">
+          <div class="m-example--demo">
+            <label class="file">
+              <input type="file" id="file" aria-label="File browser example">
+              <span class="file-custom"></span>
+            </label>
+          </div>
+          <div class="m-example--code">
+<pre class="language-markup"><code class="language-markup">
+&lt;label class=&quot;file&quot;&gt;
+  &lt;input type=&quot;file&quot; id=&quot;file&quot; aria-label=&quot;File browser example&quot;&gt;
+  &lt;span class=&quot;file-custom&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+</code></pre>
+          </div>
+        </div>
+        <div class="m-example">
 
         </div>
 
-        <h3 class="m-subtitle">File browser</h3>
-        <div class="m-example">
-          <label class="file">
-            <input type="file" id="file" aria-label="File browser example">
-            <span class="file-custom"></span>
-          </label>
-        </div>
 
 
-
-        <h3 class="m-subtitle">Progress</h3>
+        <h3 class="m-subtitle" id="progress">
+          Progress
+        </h3>
 
         <div class="m-example">
-          <progress class="progress" value="25" max="100">
-            25%
-          </progress>
-          <progress class="progress" value="50" max="100">
-            50%
-          </progress>
-          <progress class="progress" value="75" max="100">
-            75%
-          </progress>
-          <progress class="progress" value="100" max="100">
-            100%
-          </progress>
-
+          <div class="m-example--demo">
+            <progress class="progress" value="25" max="100">
+              25%
+            </progress>
+            <progress class="progress" value="50" max="100">
+              50%
+            </progress>
+            <progress class="progress" value="75" max="100">
+              75%
+            </progress>
+            <progress class="progress" value="100" max="100">
+              100%
+            </progress>
+          </div>
+          <div class="m-example--code">
+<pre class="language-markup"><code class="language-markup">
+&lt;progress class=&quot;progress&quot; value=&quot;25&quot; max=&quot;100&quot;&gt;
+  25%
+&lt;/progress&gt;
+&lt;progress class=&quot;progress&quot; value=&quot;50&quot; max=&quot;100&quot;&gt;
+  50%
+&lt;/progress&gt;
+&lt;progress class=&quot;progress&quot; value=&quot;75&quot; max=&quot;100&quot;&gt;
+  75%
+&lt;/progress&gt;
+&lt;progress class=&quot;progress&quot; value=&quot;100&quot; max=&quot;100&quot;&gt;
+  100%
+&lt;/progress&gt;
+</code></pre>
+          </div>
         </div>
 
       </section>
@@ -196,49 +446,49 @@
           <li>
             <div class="m-color-tile black"> </div>
             <span class="m-color-name">Black</span>
-            <span class="m-color-variable">black</span>
+            <span class="m-color-variable"><code>black</code></span>
 
           </li>
 
           <li>
             <div class="m-color-tile grey-darker"> </div>
             <span class="m-color-name">Grey Darker</span>
-            <span class="m-color-variable">$grey-darker</span>
+            <span class="m-color-variable"><code>$grey-darker</code></span>
 
           </li>
 
           <li>
             <div class="m-color-tile grey-dark"> </div>
             <span class="m-color-name">Grey Dark</span>
-            <span class="m-color-variable">$grey-dark</span>
+            <span class="m-color-variable"><code>$grey-dark</code></span>
 
           </li>
 
           <li>
             <div class="m-color-tile grey"> </div>
             <span class="m-color-name">Grey</span>
-            <span class="m-color-variable">$grey</span>
+            <span class="m-color-variable"><code>$grey</code></span>
 
           </li>
 
           <li>
             <div class="m-color-tile grey-light"> </div>
             <span class="m-color-name">Grey Light</span>
-            <span class="m-color-variable">$grey-light</span>
+            <span class="m-color-variable"><code>$grey-light</code></span>
 
           </li>
 
           <li>
             <div class="m-color-tile grey-lighter"> </div>
             <span class="m-color-name">Grey Lighter</span>
-            <span class="m-color-variable">$grey-lighter</span>
+            <span class="m-color-variable"><code>$grey-lighter</code></span>
 
           </li>
 
           <li>
             <div class="m-color-tile white"> </div>
             <span class="m-color-name">White</span>
-            <span class="m-color-variable">white</span>
+            <span class="m-color-variable"><code>white</code></span>
 
           </li>
 
@@ -249,27 +499,27 @@
           <li>
             <div class="m-color-tile blue"> </div>
             <span class="m-color-name">Blue</span>
-            <span class="m-color-variable">$blue</span>
+            <span class="m-color-variable"><code>$blue</code></span>
           </li>
           <li>
             <div class="m-color-tile green"> </div>
             <span class="m-color-name">Green</span>
-            <span class="m-color-variable">$green</span>
+            <span class="m-color-variable"><code>$green</code></span>
           </li>
           <li>
             <div class="m-color-tile orange"> </div>
             <span class="m-color-name">Orange</span>
-            <span class="m-color-variable">$orange</span>
+            <span class="m-color-variable"><code>$orange</code></span>
           </li>
           <li>
             <div class="m-color-tile red"> </div>
             <span class="m-color-name">Red</span>
-            <span class="m-color-variable">$red</span>
+            <span class="m-color-variable"><code>$red</code></span>
           </li>
           <li>
             <div class="m-color-tile purple"> </div>
             <span class="m-color-name">Purple</span>
-            <span class="m-color-variable">$purple</span>
+            <span class="m-color-variable"><code>$purple</code></span>
           </li>
 
         </ul>
@@ -436,26 +686,6 @@
 
                   <hr>
 
-                  <div class="select-group__flex">
-                    <div>
-                      <label class="control checkbox">
-                        <input type="checkbox">
-                        <span class="control-indicator"></span>
-                        I'm a checkbox?
-                      </label>
-                    </div>
-                    <div class="select">
-                      <select aria-label="Select menu example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <hr>
-
                   <div class="textarea">
                     <textarea class="form--input" name="" id=""></textarea>
                   </div>
@@ -495,10 +725,11 @@
 
     </div>
 
-
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower -->
+    <script src="bower_components/prism/prism.js"></script>
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

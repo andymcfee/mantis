@@ -1,5 +1,6 @@
 @import "modules/variables";
 @import "modules/mixins";
+@import "modules/prism-bb";
 
 * {
   box-sizing: border-box;
@@ -40,16 +41,66 @@ body {
 }
 
 .m-example {
-  margin: 1rem 0;
+  margin: 1rem 0 4rem;
+  border: 1px solid $grey-light;
   .radio,
   .progress {
     display: block;
   }
+  .btn:not(.btn-block) {
+    margin: .25rem;
+  }
 }
+
+.m-example--demo {
+  position: relative;
+  padding: 2rem;
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: $grey-lighter;
+    color: $grey;
+    font-weight: bold;
+    font-size: .75rem;
+    border-bottom: 1px solid $grey-light;
+    border-left: 1px solid $grey-light;
+    border-radius: 0 0 0 3px;
+    padding: .125rem .75rem;
+    content:'DEMO';
+  }
+
+}
+
+.m-example--code {
+  background: $grey-lighter;
+  border-top: 1px solid $grey-light;
+  padding: 1rem;
+  position: relative;
+  &:before {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: white;
+    color: $grey;
+    font-weight: bold;
+    font-size: .75rem;
+    border-top: 1px solid $grey-light;
+    border-left: 1px solid $grey-light;
+    border-radius: 3px 0 0 0;
+    padding: .125rem .75rem;
+    content:'CODE';
+  }
+  code,
+  pre {
+    margin-bottom: 0;
+  }
+}
+
 
 .m-title {
   font-size: 1.75rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .m-subtitle {
