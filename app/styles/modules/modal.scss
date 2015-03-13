@@ -4,6 +4,11 @@ $modal-transition-duration: 300ms;
   display: none !important;
 }
 
+.transparent {
+  opacity: 0;
+}
+
+
 .fade {
   opacity: 0;
   transition: $modal-transition-duration linear opacity, color;
@@ -112,6 +117,13 @@ $modal-inner-padding: 16px;
   }
 }
 
+// To attach to .modal-body
+.height__sm  { min-height: 150px; }
+.height__md  { min-height: 300px; }
+.height__lg  { min-height: 450px; }
+.height__xl  { min-height: 600px; }
+.height__xxl { min-height: 750px; }
+
 .small {
   font-size: 14px;
 }
@@ -193,7 +205,7 @@ $input-group-border-color: lighten(#000, 75.7%);
 }
 
 .input--sub-info {
-  color: lighten($gray-light, 25);
+  color: $grey-light;
   padding: $modal-inner-padding / 2 0 $modal-inner-padding / 2 72px;
   font-size: 14px;
   text-align: left;
