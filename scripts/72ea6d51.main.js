@@ -1,0 +1,1 @@
+"use strict";console.log("'Allo 'Allo!"),$(".m-example--demo .btn").click(function(a){a.preventDefault()});
