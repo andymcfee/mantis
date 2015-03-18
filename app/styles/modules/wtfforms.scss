@@ -117,7 +117,8 @@
     &:last-child { padding-right: 0; }
   }
 
-  .select {
+  .select,
+  .input-text {
     flex: 0 0 auto;
     margin-bottom: 0;
   }
@@ -141,8 +142,8 @@
   padding: 8px 36px 8px 16px;
   line-height: 1.5;
   color: #555;
-  background-color: $grey-lighter;
-  border: 1px solid darken($grey-lighter, 6.5);
+  background-color: white;
+  border: 1px solid $grey-light;
   border-radius: 4px;
   cursor: pointer;
   outline: 0;
@@ -429,7 +430,7 @@
   color: $text-color;
   border-radius: 3px;
   background-color: white;
-  border: 1px solid rgba($gray-light, .5);
+  border: 1px solid $grey-light;
   transition-duration: 150ms;
   transition-timing-function: ease-in-out;
   transition-property: border, background-color;
